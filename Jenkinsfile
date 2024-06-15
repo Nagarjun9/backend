@@ -21,9 +21,12 @@ pipeline {
         //     }
         
         // }
-        environment {
-            def appVersion =  ''
-        }
+        environment{
+        def appVersion = '' //variable declaration
+      }
+        // environment {
+        //     def appVersion =  ''
+        // }
          stage('read the version'){
             steps {
                 script{
