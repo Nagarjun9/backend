@@ -21,7 +21,9 @@ pipeline {
             }
         
         }
-    post { 
+       
+    }
+     post { 
         always { 
             echo 'I will always say Hello again!'
             deleteDir()
@@ -32,7 +34,6 @@ pipeline {
         failure { 
             echo 'I will run when pipeline is failure'
         }
-    }
     }
 }
 
