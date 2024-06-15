@@ -15,11 +15,13 @@ pipeline {
                 script{
                     sh """
                     echo "this is testing" 
+                    ls -l
                     """
                 }
             }
+        
         }
-        post { 
+    post { 
         always { 
             echo 'I will always say Hello again!'
             deleteDir()
@@ -31,8 +33,9 @@ pipeline {
             echo 'I will run when pipeline is failure'
         }
     }
+    }
 }
-}
+
 
 // pipeline {
 //     agent {
