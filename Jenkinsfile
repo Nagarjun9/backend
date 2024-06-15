@@ -10,17 +10,25 @@ pipeline {
     }
     
     stages {
-        stage('test'){
-            steps{
-                script{
-                    sh """
-                    echo "this is testing" 
-                    ls -l
-                    """
-                }
-            }
+        // stage('test'){
+        //     steps{
+        //         script{
+        //             sh """
+        //             echo "this is testing" 
+        //             ls -l
+        //             """
+        //         }
+        //     }
         
-        }
+        // }
+          stage('Install Dependencies'){
+              steps{
+                sh """
+                npm install 
+                ls -ltr
+                """
+              }
+          }
        
     }
      post { 
